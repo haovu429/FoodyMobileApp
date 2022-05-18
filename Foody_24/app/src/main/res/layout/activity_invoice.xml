@@ -1,0 +1,270 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".InvoiceActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/btn_confirm_invoice">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#DADADE"
+            android:orientation="vertical">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <TextView
+                    android:id="@+id/tv_diner_name_payment"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="10dp"
+                    android:paddingStart="25dp"
+                    android:paddingBottom="5dp"
+                    android:background="#BFD5C9"
+                    android:text="Tên cửa hàng"
+                    android:textSize="26sp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:background="@color/white"
+                    android:orientation="vertical">
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginBottom="10dp"
+                        android:orientation="horizontal"
+                        android:weightSum="10">
+
+                        <fragment
+                            android:id="@+id/map"
+                            tools:context=".InvoiceActivity"
+                            android:name="com.google.android.gms.maps.SupportMapFragment"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="4" />
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="5"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/tv_user_name_payment"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:paddingStart="10dp"
+                                android:text="Tên khách hàng"
+                                android:textSize="18dp" />
+
+                            <EditText
+                                android:id="@+id/editv_phone_number"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:enabled="true"
+                                android:paddingStart="10dp"
+                                android:textColor="#FF44BB"
+                                android:text="0966912357"
+                                android:textSize="14dp"/>
+
+                            <EditText
+                                android:id="@+id/editv_address_payment1"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:enabled="true"
+                                android:paddingStart="10dp"
+                                android:inputType="textNoSuggestions|textMultiLine"
+                                android:text="Nghệ An"
+                                android:textColor="#FF44BB"
+                                android:textSize="14dp" />
+                        </LinearLayout>
+
+                        <TextView
+                            android:id="@+id/tv_edit_payment_info"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="Edit"
+                            android:textSize="14dp" />
+                    </LinearLayout>
+                    <TextView
+                        android:id="@+id/tv_tg_giao_payment"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="20dp"
+                        android:text="thời gian giao" />
+                </LinearLayout>
+
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:layout_marginBottom="10dp"
+                android:orientation="vertical">
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rcv_list_detail_payment"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:weightSum="10">
+
+                    <TextView
+                        android:id="@+id/tv_total_quantity_payment"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="15dp"
+                        android:layout_marginBottom="5dp"
+                        android:layout_weight="6"
+                        android:padding="5dp"
+                        android:text="Tổng 5 phần " />
+
+                    <TextView
+                        android:id="@+id/tv_total_price_payment"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="15dp"
+                        android:layout_marginEnd="5dp"
+                        android:layout_marginBottom="5dp"
+                        android:layout_weight="4"
+                        android:padding="5dp"
+                        android:text="350 000đ"
+                        android:textAlignment="textEnd" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:weightSum="10">
+
+                    <TextView
+                        android:padding="5dp"
+                        android:layout_weight="2.5"
+                        android:layout_marginBottom="5dp"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:text="Phí giao hàng"/>
+
+                    <TextView
+                        android:id="@+id/tv_distance_invoice"
+                        android:padding="5dp"
+                        android:layout_weight="3.5"
+                        android:layout_marginBottom="5dp"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:textColor="#ED4444"
+                        android:text="5.4 km"/>
+
+                    <TextView
+                        android:id="@+id/tv_delivery_charges"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="5dp"
+                        android:layout_marginBottom="5dp"
+                        android:layout_weight="4"
+                        android:padding="5dp"
+                        android:text="5 000đ"
+                        android:textAlignment="textEnd" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:weightSum="10">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="5dp"
+                        android:layout_weight="6"
+                        android:padding="5dp"
+                        android:text="Mã giảm giá" />
+
+                    <TextView
+                        android:id="@+id/tv_discount_payment"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="5dp"
+                        android:layout_marginBottom="5dp"
+                        android:layout_weight="4"
+                        android:padding="5dp"
+                        android:text="-15 000đ"
+                        android:textAlignment="textEnd" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:weightSum="10">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="6"
+                        android:padding="5dp"
+                        android:text="Tổng cộng"
+                        android:textSize="20sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/tv_final_price_payment"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="5dp"
+                        android:layout_marginBottom="5dp"
+                        android:layout_weight="4"
+                        android:padding="5dp"
+                        android:text="340 000đ"
+                        android:textAlignment="textEnd"
+                        android:textSize="20sp"
+                        android:textStyle="bold" />
+                </LinearLayout>
+
+
+            </LinearLayout>
+            <Button
+                android:id="@+id/btn_confirm_invoice"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="#00BCD4"
+                android:padding="5dp"
+                android:text="Đã nhận đươc hàng" />
+
+            <Button
+                android:id="@+id/btn_cancel_invoice"
+                android:layout_marginTop="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="#E16060"
+                android:padding="5dp"
+                android:text="Huỷ đơn" />
+
+        </LinearLayout>
+
+    </ScrollView>
+
+
+
+</LinearLayout>

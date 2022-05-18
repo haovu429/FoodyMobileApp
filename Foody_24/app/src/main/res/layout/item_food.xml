@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:padding="5dp">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardview_item_food"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#E8E8EB"
+        app:cardCornerRadius="10dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <com.makeramen.roundedimageview.RoundedImageView
+                app:riv_corner_radius="10dp"
+                android:id="@+id/ifo_thumbnail"
+                android:layout_width="120dp"
+                android:layout_height="82dp"
+                android:layout_weight="1"
+                android:scaleType="centerCrop"
+                android:src="@drawable/food04" />
+
+            <LinearLayout
+                android:layout_width="321dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:padding="10dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/ifo_title"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Tên món ăn"
+                    android:textStyle="bold"/>
+
+                <TextView
+                    android:id="@+id/ifo_content"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Mô tả" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:weightSum="7"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/ifo_price"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="5"
+                        android:text="Giá"
+                        android:textColor="#F14645"/>
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        app:cardCornerRadius="8dp">
+
+                        <!--<Button
+                            android:id="@+id/btn_"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="#B7D8DF"
+                            android:gravity="center"
+                            android:text="+" />-->
+
+                        <ImageView
+                            android:id="@+id/img_AddToCart"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="#B7D8DF"
+                            android:gravity="center"
+                            android:src="@drawable/add_to_cart_icon"/>
+
+                    </androidx.cardview.widget.CardView>
+
+                </LinearLayout>
+
+
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+</LinearLayout>

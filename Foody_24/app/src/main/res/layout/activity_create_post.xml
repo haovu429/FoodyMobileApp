@@ -1,0 +1,399 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="#DADADE"
+    tools:context=".CreatePostActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/gradStart"
+        android:weightSum="10"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_weight="8"
+            android:layout_height="match_parent"
+            android:text="Viết bình luận"
+            android:textStyle="bold"
+            android:textSize="24dp"
+            android:layout_gravity="center"
+            android:gravity="center"/>
+
+        <TextView
+            android:id="@+id/tv_post"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="2"
+            android:gravity="center"
+            android:text="Post"
+            android:textSize="22dp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="5dp"
+        android:paddingBottom="5dp"
+        android:orientation="vertical">
+        <TextView
+            android:id="@+id/tv_diner_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Ông bầu"
+            android:textSize="20dp"
+            android:layout_marginStart="10dp"
+            android:textStyle="bold"/>
+        <TextView
+            android:id="@+id/tv_diner_address"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:text="số 1, Võ Văn Ngân, Linh Chiểu, Thủ Đức"/>
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:layout_marginBottom="10dp"
+        android:orientation="vertical">
+
+        <EditText
+            android:id="@+id/edit_title_comment"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textNoSuggestions"
+            android:hint="Tiêu đề (không bắt buộc)"/>
+
+        <EditText
+            android:id="@+id/edit_content_post"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textNoSuggestions|textMultiLine"
+            android:hint="Viết trên 100 từ, đúng chính tả, ngôn từ văn hoá, không spam,... để được duyệt điểm thưởng"
+            android:textSize="16sp"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"
+        android:weightSum="10"
+        android:layout_marginBottom="30dp"
+        android:orientation="horizontal">
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:text="Cho phép các thành viên thảo luận"
+            android:layout_weight="7"/>
+
+        <Switch
+            android:id="@+id/switch_allow_sub_comment"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:checked="true"
+            android:layout_weight="3" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:weightSum="10"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginStart="10dp"
+            android:layout_weight="7"
+            android:text="Đánh giá bắt buộc"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/tv_average_rate"
+            android:layout_weight="3"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="5.0"
+            android:layout_gravity="center"
+            android:gravity="end"
+            android:paddingEnd="20dp"
+            android:textColor="#E81313"
+            android:textSize="16sp"/>
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:layout_marginBottom="10dp"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:weightSum="10"
+            android:orientation="horizontal">
+            <TextView
+                android:id="@+id/tv_rate_vi_tri"
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:textStyle="bold"
+                android:text="5"
+                android:gravity="center"/>
+            <SeekBar
+                android:id="@+id/seekbar_vi_tri"
+                android:layout_weight="6"
+                android:layout_width="0dp"
+                android:max="10"
+                android:progress="5"
+                android:layout_height="wrap_content" />
+            <TextView
+                android:layout_weight="3"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:textStyle="bold"
+                android:text="Vị trí"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:weightSum="10"
+            android:orientation="horizontal">
+            <TextView
+                android:id="@+id/tv_rate_gia_ca"
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:inputType="number"
+                android:textStyle="bold"
+                android:text="5"
+                android:gravity="center"/>
+            <SeekBar
+                android:id="@+id/seekbar_gia_ca"
+                android:layout_weight="6"
+                android:layout_width="0dp"
+                android:max="10"
+                android:progress="5"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="3"
+                android:text="Giá cả"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:weightSum="10"
+            android:orientation="horizontal">
+            <TextView
+                android:id="@+id/tv_rate_chat_luong"
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:inputType="number"
+                android:textStyle="bold"
+                android:text="5"
+                android:gravity="center"/>
+            <SeekBar
+                android:id="@+id/seekbar_chat_luong"
+                android:layout_weight="6"
+                android:layout_width="0dp"
+                android:max="10"
+                android:progress="5"
+                android:layout_height="wrap_content" />
+            <TextView
+                android:layout_weight="3"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:textStyle="bold"
+                android:text="Chất lượng" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:weightSum="10"
+            android:orientation="horizontal">
+            <TextView
+                android:id="@+id/tv_rate_dich_vu"
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:inputType="number"
+                android:textStyle="bold"
+                android:text="5"
+                android:gravity="center"/>
+            <SeekBar
+                android:id="@+id/seekbar_dich_vu"
+                android:layout_weight="6"
+                android:layout_width="0dp"
+                android:max="10"
+                android:progress="5"
+                android:layout_height="wrap_content" />
+            <TextView
+                android:layout_weight="3"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:textStyle="bold"
+                android:text="Dịch vụ" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:weightSum="10"
+            android:orientation="horizontal">
+            <TextView
+                android:id="@+id/tv_rate_khong_gian"
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:inputType="number"
+                android:textStyle="bold"
+                android:text="5"
+                android:gravity="center"/>
+            <SeekBar
+                android:id="@+id/seekbar_khong_gian"
+                android:layout_weight="6"
+                android:layout_width="0dp"
+                android:max="10"
+                android:progress="5"
+                android:layout_height="wrap_content" />
+            <TextView
+                android:layout_weight="3"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:textStyle="bold"
+                android:text="Không gian" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="16sp"
+        android:text="Không bắt buộc"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:layout_marginStart="10dp"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"
+        android:weightSum="9"
+        android:background="@color/white"
+        android:orientation="horizontal">
+        <LinearLayout
+            android:layout_weight="3"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+            <ImageView
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:src="@drawable/ic_people_number"
+                android:layout_gravity="center"/>
+
+            <Spinner
+                android:id="@+id/spinner_people_number"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"/>
+
+            <!--<TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:textColor="#2E81E8"
+                android:text="Tuyệt vời 387" />-->
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_weight="3"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+            <ImageView
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:src="@drawable/ic_money_level"
+                android:layout_gravity="center"/>
+            <Spinner
+                android:id="@+id/spinner_price_level"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"/>
+
+            <!--<TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:textColor="#20F344"
+                android:text="Khá tốt 6" />-->
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_weight="3"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+            <ImageView
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:src="@drawable/ic_comeback"
+                android:layout_gravity="center"/>
+
+            <Spinner
+                android:id="@+id/spinner_return"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"/>
+
+            <!--<TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="Trung bình 0" />-->
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,226 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:weightSum="10"
+    tools:context=".MainActivity">
+
+    <androidx.viewpager2.widget.ViewPager2
+        android:id="@+id/view_pager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="9" />
+
+
+    <com.google.android.material.tabs.TabLayout
+        android:id="@+id/tab_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1" />
+
+<!--    <View
+        android:id="@+id/view_end_animation"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_above="@id/view_pager"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:background="#AA2828"
+        android:visibility="visible" />-->
+
+<!--    <ImageView
+        android:id="@+id/view_animation"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:background="@color/teal_200" />-->
+
+    <!--<LinearLayout
+        android:id="@+id/header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="">
+        <TextView
+            android:id="@+id/header_title"
+            android:text="Đã lưu"
+            android:textSize="24sp"
+            android:gravity="center"
+            android:layout_width="0dp"
+            android:layout_weight="9.7"
+            android:layout_height="50dp"
+            app:layout_constraintHorizontal_weight="0.85"
+            android:background="#ED7D31"/>
+
+        <ImageView
+            android:id="@+id/edit_icon"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_weight="0.3"
+            android:layout_gravity="center_vertical"
+            android:adjustViewBounds="true"
+            android:maxHeight="50dp"
+            android:maxWidth="50dp"
+            android:scaleType="fitCenter"
+            android:src="@drawable/edit_icon"
+            android:background="#ED7D31" />
+
+    </LinearLayout>
+
+
+    <TableLayout
+        android:id="@+id/tabLayout"
+        android:layout_width="match_parent"
+        android:layout_height="35dp"
+        app:layout_constraintTop_toBottomOf="@id/header"/>
+
+    <ListView
+        android:id="@+id/listvSaved"
+        android:layout_width="match_parent"
+        android:layout_height="610dp"
+        app:layout_constraintTop_toBottomOf=""/>-->
+
+
+
+    <!--<Button
+        android:id="@+id/btnAll"
+        android:text="Tất cả"
+        android:textSize="14sp"
+        android:textAllCaps="false"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintHorizontal_chainStyle="spread_inside"
+        app:layout_constraintHorizontal_weight="1"
+        app:layout_constraintVertical_weight="0.4"
+        app:layout_constraintTop_toBottomOf="@+id/header_title"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@+id/btnLocation"
+        app:layout_constraintBottom_toBottomOf="@+id/g1"
+        android:background="#D9D9D9"/>
+
+    <Button
+        android:id="@+id/btnLocation"
+        android:text="Địa điểm"
+        android:textSize="14sp"
+        android:textAllCaps="false"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintHorizontal_weight="1"
+        app:layout_constraintTop_toBottomOf="@+id/header_title"
+        app:layout_constraintLeft_toRightOf="@+id/btnAll"
+        app:layout_constraintRight_toLeftOf="@+id/btnImage"
+        app:layout_constraintBottom_toBottomOf="@+id/g1"
+        android:background="#D9D9D9"/>
+
+    <Button
+        android:id="@+id/btnImage"
+        android:text="Hình ảnh"
+        android:textSize="14sp"
+        android:textAllCaps="false"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintHorizontal_weight="1"
+        app:layout_constraintTop_toBottomOf="@+id/header_title"
+        app:layout_constraintLeft_toRightOf="@+id/btnLocation"
+        app:layout_constraintRight_toLeftOf="@+id/btnPosts"
+        app:layout_constraintBottom_toBottomOf="@+id/g1"
+        android:background="#D9D9D9"/>
+
+    <Button
+        android:id="@+id/btnPosts"
+        android:text="Bài viết"
+        android:textSize="14sp"
+        android:textAllCaps="false"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="#D9D9D9"
+        app:layout_constraintHorizontal_weight="1"
+        app:layout_constraintTop_toBottomOf="@+id/header_title"
+        app:layout_constraintLeft_toRightOf="@+id/btnImage"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBottom_toBottomOf="@+id/g1"/>-->
+
+    <!--<androidx.constraintlayout.widget.Guideline
+        android:id="@+id/g1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_begin="88dp" />-->
+
+    <!--<LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="bottom">
+
+        <ImageView
+            android:id="@+id/home_icon"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="1"
+            android:adjustViewBounds="true"
+            android:background="#FBE5D6"
+            android:maxWidth="35dp"
+            android:maxHeight="35dp"
+            android:scaleType="fitCenter"
+            android:src="@drawable/home_icon" />
+
+        <ImageView
+            android:id="@+id/save_icon"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:adjustViewBounds="true"
+            android:maxHeight="35dp"
+            android:maxWidth="35dp"
+            android:scaleType="fitCenter"
+            android:src="@drawable/save_icon"
+            android:background="#FBE5D6" />
+
+
+        <ImageView
+            android:id="@+id/order_icon"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_gravity="center_vertical"
+            android:adjustViewBounds="true"
+            android:maxHeight="35dp"
+            android:maxWidth="35dp"
+            android:scaleType="fitCenter"
+            android:src="@drawable/order_icon"
+            android:background="#FBE5D6" />
+
+        <ImageView
+            android:id="@+id/notify_icon"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_gravity="center_vertical"
+            android:adjustViewBounds="true"
+            android:maxHeight="35dp"
+            android:maxWidth="35dp"
+            android:scaleType="fitCenter"
+            android:src="@drawable/notify_icon"
+            android:background="#FBE5D6" />
+
+        <ImageView
+            android:id="@+id/acc_icon"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_gravity="center_vertical"
+            android:adjustViewBounds="true"
+            android:background="#FBE5D6"
+            android:maxHeight="35dp"
+            android:maxWidth="35dp"
+            android:scaleType="fitCenter"
+            android:src="@drawable/acc_icon" />
+    </LinearLayout>-->
+
+
+</LinearLayout>
